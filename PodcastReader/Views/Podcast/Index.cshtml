@@ -3,15 +3,10 @@
     ViewBag.Title = "Podcast Reader";
 }
 
-<h2>Index</h2>
-
 <table class="table">
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.Title)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Url)
         </th>
         <th></th>
     </tr>
@@ -20,10 +15,7 @@
     {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.Title)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Url)
+                <a href="@item.Url">@item.Title</a>
             </td>
         </tr>
     }
