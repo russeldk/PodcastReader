@@ -8,6 +8,6 @@ namespace PodcastReader.Repository.Podcasts
 {
     public interface IPodcastRepository
     {
-        IEnumerable<Podcast> GetPodcastsFromXml(string xml);
+        IEnumerable<Podcast> GetPodcasts();
     }
 }

@@ -15,7 +15,7 @@ namespace PodcastReader.Controllers
         // GET: Podcast
         public ActionResult Index()
         {
-            var podCasts = _podcastRepository.GetPodcastsFromXml("test");
+            var podCasts = _podcastRepository.GetPodcasts();
 
             return View(podCasts);
         }

@@ -9,7 +9,7 @@ namespace PodcastReader.Repository.Podcasts
 {
     public class PodcastRepository : IPodcastRepository
     {
-        public IEnumerable<Podcast> GetPodcastsFromXml(string xml)
+        public IEnumerable<Podcast> GetPodcasts()
         {
             string url = "https://www.dr.dk/mu/Feed/p1-debat.xml?format=podcast&limit=500";
             XmlReader reader = XmlReader.Create(url);
