@@ -1,4 +1,7 @@
-﻿using PodcastReader.Repository.Podcasts;
+﻿using AutoMapper;
+using PodcastReader.Models.Podcasts;
+using PodcastReader.Repository.Podcasts;
+using System.Collections.Generic;
 using System.Web.Mvc;
 
 namespace PodcastReader.Controllers
@@ -15,9 +18,10 @@ namespace PodcastReader.Controllers
         // GET: Podcast
         public ActionResult Index()
         {
-            var podCasts = _podcastRepository.GetPodcasts();
+            var podcasts = _podcastRepository.GetPodcasts();
+            var podcastModels = Mapper.Map<IEnumerable<Podcast>, IEnumerable<PodcastModel>>(podcasts);
 
-            return View(podCasts);
+            return View(podcastModels);
         }
     }
 }
